@@ -2,8 +2,7 @@
 
 {% assign section = include.section %}
 {% if section.title contains "$$" %}
-{% raise "yp mama" %}
-{{ 1/0 }}
+    {% raise "yp mama" %}
 {% endif %}
 <section id="{{ include.section.section_id }}" class="hero">
     {% if section.image or site.data.author.avatar %}<img src="{% assign image_is_not_empty = section.image | is_not_empty %}{% if image_is_not_empty %}{{ section.image | relative_url }}{% else %}{{ site.data.author.avatar | relative_url }}{% endif %}" alt="{% assign image_is_not_empty = section.image | is_not_empty %}{% if image_is_not_empty %}{{ section.image_alt }}{% else %}{{ site.data.author.avatar_alt }}{% endif %}" />{% endif %}
