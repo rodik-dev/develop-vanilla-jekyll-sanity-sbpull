@@ -205,6 +205,13 @@ module Stackbit
     end
 
   end
+  
+  def raise_error(msg)
+    invalid_file = @context.registers[:page]['path']
+    err_msg = "On #{invalid_file}: #{msg}"
+    raise err_msg
+  end
+
 
 end
 
