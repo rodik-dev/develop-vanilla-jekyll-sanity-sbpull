@@ -5,3 +5,4 @@
  */
 
  console.log('cl',document.querySelectorAll('.hero .copy')[0].innerText);
+ throw 'bye';
